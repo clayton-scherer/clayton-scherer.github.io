@@ -4,37 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <header class="page-header">
-    <h1>Code by Clayton</h1>
-    <p>
-      Welcome to my site!<br /><br />This is my professional portfolio<br />containing
-      some of my projects<br />and information about me!
-    </p>
-    <nav class="links">
-      <ol>
-        <li class="link">
-          <a href="GitHub">https://github.com/clayton-scherer</a>
-        </li>
-        <li class="link">
-          <a href="LinkedIn"
-            >https://www.linkedin.com/in/clayton-scherer-5247bb120/</a
-          >
-        </li>
-      </ol>
+    <title>Clayton Scherer</title>
+    <header class="page-header">
+      <h1>Code by Clayton</h1>
+      <p>
+        Welcome to my site! This is my professional portfolio containing some of
+        my projects and information about me!
+      </p>
+    </header>
+    <nav class="nav-menu">
+      <ul>
+        <button>About me<a href="#about-me"></a></button>
+        <button>My Projects<a href="#proj-3"></a></button>
+      </ul>
     </nav>
-  </header>
+  </head>
   <body>
-    <section class="about-me">
+    <section class="about-me" id="about-me">
       <h2>About Me</h2>
-      <p>I am a coding prodigy work in progress.</p>
-      <picture></picture>
+      <img src="Profile.jpg" alt="Clayton Scherer" />
+      <p>I am passionate about developing clean, testable code.</p>
       <p>Contact Information:</p>
       <p>Links to professional networking sites</p>
+      <nav class="links">
+        <ol>
+          <li class="link">
+            <a href="https://github.com/clayton-scherer" target="_blank"
+              >My GitHub</a
+            >
+          </li>
+          <li class="link">
+            <a
+              href="https://www.linkedin.com/in/clayton-scherer-5247bb120/"
+              target="_blank"
+              >My LinkedIn</a
+            >
+          </li>
+        </ol>
+      </nav>
       <p>List of skills</p>
     </section>
-    <section class="my-projects">
+    <section class="my-projects" id="my-projects">
       <h2>My Projects</h2>
       <article>
         <h3>Project 1</h3>
@@ -47,7 +57,7 @@
         <p></p>
       </article>
       <article>
-        <h3>Project 3</h3>
+        <h3 id="proj-3">Project 3</h3>
         <picture></picture>
         <p></p>
       </article>

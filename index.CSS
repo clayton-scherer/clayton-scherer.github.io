@@ -35,6 +35,16 @@ a {
 a:hover {
   color: rgb(240, 239, 239);
 }
+
 section a {
   color: blue;
+}
+
+img {
+  height: 20%;
+  width: 40%;
+}
+
+p {
+  width: 50%;
 }

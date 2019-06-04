@@ -6,33 +6,35 @@
   margin-left: 0;
 
   padding: 0;
-
-  background-color: cornflowerblue;
 }
 
 html {
   font: 20px/1 sans-serif;
 }
+
 .page-header {
-  margin-top: 0;
-  text-align: center;
+  display: flex;
+  background-color: cornflowerblue;
+  justify-content: space-between;
 }
+.nav-menu {
+  display: flex;
+  margin-right: 0.5rem;
+}
+
 ul {
   list-style-type: none;
 }
+
 a {
   color: rgb(0, 0, 0);
-
-  padding: 0.25rem 0.5rem;
 
   text-decoration: none;
 }
 
-.nav-menu {
-  display: flex;
+a:hover {
+  color: rgb(240, 239, 239);
 }
-
-.nav-menu__list {
-  padding: 2rem;
-  justify-content: space-between;
+section a {
+  color: blue;
 }

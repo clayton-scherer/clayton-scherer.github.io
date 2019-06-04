@@ -10,16 +10,26 @@
 
 html {
   font: 20px/1 sans-serif;
+  background-color: #ffd700;
 }
 
 .page-header {
   display: flex;
-  background-color: cornflowerblue;
+  background-color: #ff2400;
   justify-content: space-between;
 }
+
 .nav-menu {
   display: flex;
-  margin-right: 0.5rem;
+  align-items: center;
+}
+
+.nav-menu__list {
+  padding-right: 1rem;
+}
+
+nav ul {
+  display: flex;
 }
 
 ul {
@@ -27,24 +37,37 @@ ul {
 }
 
 a {
-  color: rgb(0, 0, 0);
+  color: yellow;
 
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(240, 239, 239);
+  color: grey;
 }
 
 section a {
-  color: blue;
+  color: #ff2400;
+  padding-right: 1rem;
+}
+section a:hover {
+  color: grey;
+}
+
+.profile-picture {
+  width: 15%;
+}
+
+#profile-border {
+  border: 0.75rem ridge #c19a6b;
+  border-radius: 0.25rem;
 }
 
 img {
-  height: 20%;
-  width: 40%;
+  width: 35%;
+  height: 5%;
 }
 
 p {
-  width: 50%;
+  width: 35%;
 }

@@ -67,6 +67,7 @@ a:hover {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .hero-image {
   background-image: url(http://lorempixel.com/output/nature-q-c-1200-600-3.jpg);
   background-size: 100vw;
@@ -78,11 +79,22 @@ a:hover {
 }
 
 .hero-image__header {
-  color: red;
+  color: #f39761;
 }
 
 .hero-image__message {
-  color: yellow;
+  color: #f39761;
+}
+
+section {
+  color: #54725d;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: black;
 }
 
 section a {

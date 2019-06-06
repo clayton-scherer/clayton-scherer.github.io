@@ -70,6 +70,9 @@ a:hover {
 }
 
 .hero-image__message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 9rem;
   width: 35%;
 }

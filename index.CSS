@@ -10,14 +10,19 @@
 
 html {
   font: 20px/1.5 sans-serif;
-  background-color: #ffd700;
+  background-color: #ffd900c7;
+}
+
+main {
+  padding-top: 2rem;
 }
 
 .page-header {
   display: flex;
-  background-color: #ff2400;
+  background-image: linear-gradient(-3deg, red, yellow);
+  /* background-color: #ff2200d2; */
   justify-content: space-between;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .nav-menu {
@@ -47,6 +52,10 @@ a:hover {
   color: grey;
 }
 
+.about-me__section {
+  padding-bottom: 2rem;
+}
+
 .skills-heading {
   padding-top: 1rem;
 }
@@ -66,15 +75,20 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 40vh;
+  height: 45vh;
+}
+
+.hero-image__header {
+  color: red;
+  padding-top: 2rem;
 }
 
 .hero-image__message {
+  align-items: center;
+  color: yellow;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 9rem;
-  width: 35%;
+  padding-bottom: 10rem;
 }
 
 section a {
@@ -109,12 +123,18 @@ article {
   border-radius: 0.25rem;
 }
 
+.footer {
+  background-image: linear-gradient(3deg, red, yellow);
+  color: yellow;
+  margin-top: 3.1rem;
+  padding: 1.5rem;
+}
+
 img {
-  width: 50vw;
+  max-width: 60vw;
   padding: 1rem;
-  max-height: 50vh;
 }
 
 p {
-  width: 50%;
+  width: 55vw;
 }

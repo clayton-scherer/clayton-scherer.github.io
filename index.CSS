@@ -10,7 +10,8 @@
 
 html {
   font: 20px/1.5 sans-serif;
-  background-color: rgba(255, 255, 0, 0.781);
+  /* background-color: rgb(247, 247, 129); */
+  background-color: bisque;
 }
 
 main {
@@ -19,7 +20,7 @@ main {
 
 .page-header {
   display: flex;
-  background-image: linear-gradient(-6deg, red, yellow);
+  background-image: linear-gradient(-45deg, red, yellow);
   justify-content: space-between;
   padding: 2rem;
 }
@@ -78,23 +79,9 @@ a:hover {
   height: 45vh;
 }
 
-.hero-image__header {
-  color: #f39761;
-}
-
+.hero-image__header,
 .hero-image__message {
-  color: #f39761;
-}
-
-section {
-  color: #54725d;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: black;
+  color: #f75e06;
 }
 
 section a {
@@ -121,23 +108,23 @@ article {
 }
 
 .profile-picture {
-  width: 25%;
+  width: 20vw;
   padding: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0.75rem ridge #c19a6b;
-  border-radius: 0.25rem;
+  border-radius: 0.234rem;
 }
 
 .footer {
-  background-image: linear-gradient(6deg, red, yellow);
+  background-image: linear-gradient(45deg, red, yellow);
   color: yellow;
   margin-top: 5.25rem;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 img {
-  max-width: 60vw;
+  max-width: 40vw;
   padding: 1rem;
 }
 

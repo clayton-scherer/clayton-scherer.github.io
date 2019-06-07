@@ -140,6 +140,14 @@ p {
     width: 22rem;
   }
 
+  .profile-picture {
+    width: 100vw;
+  }
+
+  nav ul {
+    display: block;
+  }
+
   .hero-image {
     background-size: contain;
     width: 22rem;
@@ -147,5 +155,9 @@ p {
 
   .footer {
     width: 22rem;
+  }
+
+  p {
+    width: 100vw;
   }
 }

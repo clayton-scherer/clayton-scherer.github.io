@@ -69,13 +69,14 @@ a:hover {
 }
 
 .hero-image {
+  align-items: center;
   background-image: url(http://lorempixel.com/output/nature-q-c-1200-600-3.jpg);
+  background-repeat: no-repeat;
   background-size: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 45vh;
+  height: 40vh;
+  justify-content: space-evenly;
 }
 
 .hero-image__header,
@@ -131,5 +132,5 @@ img {
 }
 
 p {
-  width: 55vw;
+  width: 50vw;
 }

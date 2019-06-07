@@ -70,7 +70,7 @@ a:hover {
 
 .hero-image {
   align-items: center;
-  background-image: url(http://lorempixel.com/output/nature-q-c-1200-600-3.jpg);
+  background-image: url(https://lorempixel.com/output/nature-q-c-1200-600-3.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
   display: flex;
@@ -108,7 +108,7 @@ article {
 }
 
 .skill-list {
-  margin-bottom: 2.6rem;
+  margin-bottom: 4.72rem;
 }
 
 .profile-picture {
@@ -116,7 +116,7 @@ article {
   padding: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 0.35rem ridge #c19a6b;
+  border: 0.55rem ridge #c19a6b;
   border-radius: 0.234rem;
 }
 
@@ -133,4 +133,19 @@ img {
 
 p {
   width: 50vw;
+}
+
+@media (min-width: 300px) {
+  .page-header {
+    width: 22rem;
+  }
+
+  .hero-image {
+    background-size: contain;
+    width: 22rem;
+  }
+
+  .footer {
+    width: 22rem;
+  }
 }

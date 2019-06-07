@@ -134,10 +134,10 @@ img {
 p {
   width: 50vw;
 }
-
+/* 
 @media (min-width: 300px) {
   .page-header {
-    width: 22rem;
+    width: 100vw;
   }
 
   .profile-picture {
@@ -149,15 +149,15 @@ p {
   }
 
   .hero-image {
-    background-size: contain;
-    width: 22rem;
+    background-size: 100vw;
+     width: 100vw;
   }
 
   .footer {
-    width: 22rem;
+     width: 100vw;
   }
 
   p {
     width: 100vw;
   }
-}
+} */

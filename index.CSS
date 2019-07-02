@@ -5,7 +5,8 @@
 }
 
 html {
-  font: 20px/1.5 sans-serif;
+  font: 18px/1.5 sans-serif;
+  background: linear-gradient(135deg, silver, rgb(126, 68, 68) 40%, #ff2400);
 }
 
 ul {
@@ -24,7 +25,6 @@ img {
 }
 
 section {
-  background: linear-gradient(135deg, darkgoldenrod, orange 60%, cyan);
   height: 100vh;
 }
 
@@ -48,7 +48,7 @@ div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60%;
+  height: 50%;
   margin: 0 auto;
   padding-top: 2rem;
   width: 80%;
@@ -133,14 +133,13 @@ section.Contact-Info {
   }
 }
 
-@media (min-width: 900px) {
-
+@media (min-width: 1024px) {
   img {
-  height: 150px;
-  width: 150px;
+    height: 100px;
+    width: 100px;
   }
 
   html {
-    font: 30px/2.0 sans-serif;
+    font: 24px/2 sans-serif;
   }
 }

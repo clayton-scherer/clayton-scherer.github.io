@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio home - Clayton Scherer</title>
-    <link rel="stylesheet" href="index.CSS" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Clayton Scherer - About Me, Contact, My Projects</title>
+  <link rel="stylesheet" href="index.CSS" />
+</head>
+
+<body>
+  <section class="main-header">
     <header class="page-header">
-      <h1>Code with Clayton</h1>
-      <nav class="nav-menu">
-        <ul>
-          <li class="nav-menu__list">
-            <a href="./index.html ">Home</a>
-          </li>
-          <li class="nav-menu__list">
-            <a href="./about-me.html">Contact</a>
-          </li>
-          <li class="nav-menu__list">
-            <a href="./my-projects.html">Projects</a>
+      <h1 class="CWC">Code With Clayton</h1>
+      <ul class="nav-menu">
+        <li class="nav-menu__list">
+          <a href="#About-Me">About Me</a>
+        </li>
+        <li class="nav-menu__list">
+          <a href="#My-Projects">My Projects</a>
+        </li>
+        <li class="nav-menu__list">
+          <a href="#Contact-Info">Contact Me</a>
+        </li>
+      </ul>
+    </header>
+    <div class="div__skills">
+      <article clas="skills">
+        <h2 clas="skills-header">My Skills and Interests</h2>
+    </div>
+    </article>
+  </section>
+  <section class="About-Me">
+    <a name="About-Me"></a>
+    <div class="div2"></div>
+  </section>
+  <section class="My-Projects">
+    <a name="My-Projects"></a>
+    <div class="div3"></div>
+  </section>
+  <section class="Contact-Info">
+    <a name="Contact-Info"></a>
+    <div class="div4">
+      <article class="social-media">
+        <h2 class="social-media__header">Let's Connect!</h2>
+        <ul class="media-list">
+          <li class="media-list__item"><a href="https://github.com/clayton-scherer" target="_blank"><img
+                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                alt="GitHub icon and link">GitHub</a></li>
+          <li class="media-list__item"><a href="https://www.linkedin.com/in/clayton-scherer-5247bb120/"
+              target="_blank"><img
+                src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+                alt="LinkedIn icon and link">LinkedIn</a></li>
+          <li class="media-list__item"><a href="mailto:cscherer93@aol.com"><img
+                src="https://www.stickpng.com/assets/thumbs/584856bce0bb315b0f7675ad.png" alt="Email Me">Email Me</a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <section class="hero-image">
-      <h2 class="hero-image__header">Developer in Development</h2>
-      <h3 class="hero-image__message">
-        Javascript | Fullstack Apprentice
-      </h3>
-    </section>
-    <article>
-      <h4 class="skills-heading">Skills and Interests</h4>
-      <ul class="skill-list">
-        <li class="skill-list-item">JavaScript</li>
-        <li class="skill-list-item">Jest | React</li>
-        <li class="skill-list-item">Node</li>
-        <li class="skill-list-item">etc..</li>
-      </ul>
-    </article>
-  </body>
-  <footer class="footer">
-    <small>&copy;Clayton Scherer 2019</small>
-  </footer>
+      </article>
+      <footer class="footer-copyright">
+        &copy;2019
+      </footer>
+    </div>
+  </section>
+</body>
+
 </html>

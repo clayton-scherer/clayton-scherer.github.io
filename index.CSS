@@ -1,163 +1,146 @@
-/* Default styles/resets */
-
 * {
   box-sizing: border-box;
-
   margin: 0;
-
   padding: 0;
 }
 
 html {
   font: 20px/1.5 sans-serif;
-  background-color: bisque;
 }
 
-main {
-  padding-top: 2rem;
+ul {
+  list-style: none;
 }
+
+a {
+  font-size: 120%;
+  color: silver;
+  text-decoration: none;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+section {
+  background: linear-gradient(135deg, darkgoldenrod, orange 60%, cyan);
+  height: 100vh;
+}
+
+div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Header, Hero Image, Nav */
 
 .page-header {
+  align-items: center;
+  background-image: url(https://lorempixel.com/output/abstract-q-g-1920-1920-7.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: silver;
   display: flex;
-  background-image: linear-gradient(-45deg, red, yellow);
+  flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  height: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 80%;
 }
 
 .nav-menu {
   display: flex;
-  align-items: center;
 }
 
 .nav-menu__list {
-  padding-right: 1rem;
+  padding: 1rem;
 }
 
-nav ul {
+a:hover,
+a:focus {
+  border-bottom: 2px solid black;
+}
+
+a:visited {
+  color: crimson;
+}
+
+.div__skills {
+  background-color: tomato;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-header {
+  margin: 0 auto;
+}
+
+/* About Me */
+
+.div2 {
+  background-color: bisque;
+}
+
+/* My Projects */
+
+.div3 {
+  background-color: brown;
+}
+
+/* Contact Me and footer */
+
+.div4 {
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media__header {
+  display: flex;
+  justify-content: center;
+}
+
+.media-list {
   display: flex;
 }
-
-ul {
-  list-style-type: none;
+.media-list__item {
+  padding: 1rem;
 }
 
 a {
-  color: yellow;
-
-  text-decoration: none;
-}
-
-a:hover {
-  color: grey;
-}
-
-.about-me__section {
-  padding-bottom: 2rem;
-}
-
-.skills-heading {
-  padding-top: 1rem;
-}
-
-.social-media-heading {
-  padding-top: 1rem;
-}
-
-.bio {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.hero-image {
-  align-items: center;
-  background-image: url(https://lorempixel.com/output/nature-q-c-1200-600-3.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw;
   display: flex;
   flex-direction: column;
-  height: 40vh;
-  justify-content: space-evenly;
+  text-align: center;
 }
 
-.hero-image__header,
-.hero-image__message {
-  color: #f75e06;
+section.Contact-Info {
+  height: 50vh;
 }
 
-section a {
-  color: #ff2400;
-  padding-right: 1rem;
+@media (max-width: 399px) {
+  html {
+    font: 14px/1 sans-serif;
+  }
 }
 
-section a:hover {
-  color: grey;
-}
+@media (min-width: 900px) {
 
-.my-projects-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-
-.skill-list {
-  margin-bottom: 4.72rem;
-}
-
-.profile-picture {
-  width: 25vw;
-  padding: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0.55rem ridge #c19a6b;
-  border-radius: 0.234rem;
-}
-
-.footer {
-  background-image: linear-gradient(45deg, red, yellow);
-  color: yellow;
-  padding: 1rem;
-}
-
-img {
-  max-width: 40vw;
-  padding: 1rem;
-}
-
-p {
-  width: 50vw;
-}
-/* 
-@media (min-width: 300px) {
-  .page-header {
-    width: 100vw;
+  img {
+  height: 150px;
+  width: 150px;
   }
 
-  .profile-picture {
-    width: 100vw;
+  html {
+    font: 30px/2.0 sans-serif;
   }
-
-  nav ul {
-    display: block;
-  }
-
-  .hero-image {
-    background-size: 100vw;
-     width: 100vw;
-  }
-
-  .footer {
-     width: 100vw;
-  }
-
-  p {
-    width: 100vw;
-  }
-} */
+}

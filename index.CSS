@@ -4,17 +4,29 @@
   padding: 0;
 }
 
+html {
+  font: 20px/1.5 sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 section {
   background: linear-gradient(135deg, darkgoldenrod, orange 60%, cyan);
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 div {
@@ -24,9 +36,33 @@ div {
 /* Header, Hero Image, Nav */
 
 .div1 {
-  background-color: aqua;
+  background-color: antiquewhite;
   height: 100vh;
   width: 80vw;
+}
+
+.div1__skills {
+  background-color: tomato;
+  height: 100vh;
+  width: 80vw;
+}
+
+.page-header {
+  background-image: url(https://lorempixel.com/output/abstract-q-g-1200-600-2.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  height: 50%;
+  justify-content: space-around;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-header {
+  margin: 0 auto;
 }
 
 /* About Me */
@@ -52,10 +88,30 @@ div {
   display: flex;
   height: 50vh;
   width: 80vw;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.media-list {
+  display: flex;
+  align-items: center;
+}
+.media-list__item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 footer {
   margin: 2rem;
+}
+
+section.Contact-Info {
+  height: 50vh;
 }

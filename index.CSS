@@ -72,17 +72,21 @@ a:visited {
 }
 
 .div__skills {
-  background-color: tomato;
-}
-
-.skills {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  height: 50%;
+  width: 40%;
+  margin-left: 10%;
+  float: left;
 }
 
-.skills-header {
-  margin: 0 auto;
+.skills-list {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  width: 40%;
+  margin-right: 10%;
+  float: right;
 }
 
 /* About Me */

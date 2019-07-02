@@ -12,6 +12,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   width: 75px;
   height: 75px;
@@ -23,29 +27,51 @@ section {
 }
 
 div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0 auto;
+  width: 80%;
 }
 
 /* Header, Hero Image, Nav */
 
-.div1 {
-  background-color: antiquewhite;
-  height: 100%;
+.page-header {
+  align-items: center;
+  background-image: url(https://lorempixel.com/output/abstract-q-g-1920-1920-7.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
   width: 80%;
 }
 
-.div1__skills {
-  background-color: tomato;
-  height: 100%;
-  width: 100%;
+.nav-menu {
+  display: flex;
 }
 
-.page-header {
-  background-image: url(https://lorempixel.com/output/abstract-q-g-1200-600-2.jpg);
-  background-repeat: no-repeat;
-  display: flex;
-  height: 50%;
-  justify-content: space-around;
+.nav-menu__list {
+  padding: 1rem;
+  color: silver;
+}
+
+a:hover, a:focus {
+
+}
+
+a:visited {
+  color: red;
+
+}
+
+.div__skills {
+  background-color: tomato;
 }
 
 .skills {

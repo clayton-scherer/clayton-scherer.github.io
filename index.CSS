@@ -82,17 +82,27 @@ a:visited {
 
 .skills-list {
   display: flex;
+  float: right;
   justify-content: center;
   height: 50%;
   width: 40%;
   margin-right: 10%;
-  float: right;
 }
 
 /* About Me */
 
 .div2 {
   background-color: bisque;
+}
+
+.profile-picture {
+  height: 35%;
+  width: 35%;
+  margin-bottom: 3rem;
+}
+
+p {
+  max-width: 75%;
 }
 
 /* My Projects */
@@ -134,6 +144,11 @@ section.Contact-Info {
 @media (max-width: 399px) {
   html {
     font: 14px/1 sans-serif;
+  }
+
+  .profile-picture {
+    height: 50%;
+    width: 100%;
   }
 }
 

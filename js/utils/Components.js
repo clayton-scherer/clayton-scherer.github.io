@@ -41,7 +41,7 @@ class Components {
     ulElement.innerHTML = liElements.join("");
 
     buttonElement.classList.add("navigation__button");
-    buttonElement.textContent = "| | |";
+    buttonElement.textContent = "|||";
 
     buttonElement.addEventListener("click", () => {
       ulElement.classList.toggle("hidden");

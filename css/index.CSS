@@ -74,7 +74,6 @@ nav {
   align-items: center;
   background-image: url(https://lorempixel.com/output/abstract-q-g-1920-1920-7.jpg);
   background-attachment: fixed;
-  background-repeat: no-repeat;
   color: silver;
   display: flex;
   flex-direction: column;
@@ -89,9 +88,7 @@ nav {
   background-color: transparent;
   border: none;
   color: crimson;
-  font-size: 200%;
-  padding: 0.5rem 0.5rem;
-  width: 4rem;
+  font-size: 175%;
   left: 0;
 }
 
@@ -125,7 +122,6 @@ nav {
   float: right;
   height: 50%;
   justify-content: center;
-  margin-right: 0.5rem;
   text-align: center;
   width: 45%;
 }
@@ -221,10 +217,10 @@ section.Contact-Info {
 
   nav {
     position: fixed;
-    display: grid;
+    display: block;
     width: 25%;
-    top: 3%;
-    left: 0;
+    top: 0;
+    left: 1%;
   }
 
   html {

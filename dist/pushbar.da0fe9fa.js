@@ -117,74 +117,174 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/utils/pushbar.js":[function(require,module,exports) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  return bundleURL;
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+var Pushbar =
+/*#__PURE__*/
+function () {
+  function Pushbar() {
+    var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+      overlay: true,
+      blur: false
+    };
 
-    if (matches) {
-      return getBaseURL(matches[0]);
+    _classCallCheck(this, Pushbar);
+
+    this.activeBar = null;
+    this.overlay = false;
+
+    if (config.overlay) {
+      this.overlay = document.createElement('div');
+      this.overlay.classList.add('pushbar_overlay');
+      document.querySelector('body').appendChild(this.overlay);
     }
-  }
 
-  return '/';
-}
+    if (config.blur) {
+      var mainContent = document.querySelector('.pushbar_main_content');
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
+      if (mainContent) {
+        mainContent.classList.add('pushbar_blur');
       }
     }
 
-    cssTimeout = null;
-  }, 50);
-}
+    this.bindEvents();
+  }
 
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  _createClass(Pushbar, [{
+    key: "handleOpenEvent",
+    value: function handleOpenEvent(e) {
+      e.preventDefault();
+      var pushbarId = e.currentTarget.getAttribute('data-pushbar-target');
+
+      if (pushbarId) {
+        this.open(pushbarId);
+      }
+    }
+  }, {
+    key: "handleCloseEvent",
+    value: function handleCloseEvent(e) {
+      e.preventDefault();
+      this.close();
+    }
+  }, {
+    key: "handleKeyEvent",
+    value: function handleKeyEvent(e) {
+      if (this.opened && e.keyCode === 27) {
+        this.close();
+      }
+    }
+  }, {
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      var triggers = document.querySelectorAll('[data-pushbar-target]');
+      var closers = document.querySelectorAll('[data-pushbar-close]');
+      triggers.forEach(function (trigger) {
+        return trigger.addEventListener('click', function (e) {
+          return _this.handleOpenEvent(e);
+        }, false);
+      });
+      closers.forEach(function (closer) {
+        return closer.addEventListener('click', function (e) {
+          return _this.handleCloseEvent(e);
+        }, false);
+      });
+
+      if (this.overlay) {
+        this.overlay.addEventListener('click', function (e) {
+          return _this.handleCloseEvent(e);
+        }, false);
+      }
+
+      document.addEventListener('keyup', function (e) {
+        return _this.handleKeyEvent(e);
+      });
+    }
+  }, {
+    key: "open",
+    value: function open(pushbarId) {
+      // Current bar is already opened
+      if (String(pushbarId) === this.activeBarId && this.opened) {
+        return;
+      } // Get new pushbar target
+
+
+      var pushbar = Pushbar.findElementById(pushbarId);
+      if (!pushbar) return; // Close active bar (if exists)
+
+      if (this.opened) {
+        this.close();
+      }
+
+      Pushbar.dispatchOpen(pushbar);
+      pushbar.classList.add('opened');
+      var Root = document.querySelector('html');
+      Root.classList.add('pushbar_locked');
+      Root.setAttribute('pushbar', pushbarId);
+      this.activeBar = pushbar;
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      var activeBar = this.activeBar;
+      if (!activeBar) return;
+      Pushbar.dispatchClose(activeBar);
+      activeBar.classList.remove('opened');
+      var Root = document.querySelector('html');
+      Root.classList.remove('pushbar_locked');
+      Root.removeAttribute('pushbar');
+      this.activeBar = null;
+    }
+  }, {
+    key: "opened",
+    get: function get() {
+      var activeBar = this.activeBar;
+      return Boolean(activeBar instanceof HTMLElement && activeBar.classList.contains('opened'));
+    }
+  }, {
+    key: "activeBarId",
+    get: function get() {
+      var activeBar = this.activeBar;
+      return activeBar instanceof HTMLElement && activeBar.getAttribute('data-pushbar-id');
+    }
+  }], [{
+    key: "dispatchOpen",
+    value: function dispatchOpen(pushbar) {
+      var event = new CustomEvent('pushbar_opening', {
+        bubbles: true,
+        detail: {
+          pushbar: pushbar
+        }
+      });
+      pushbar.dispatchEvent(event);
+    }
+  }, {
+    key: "dispatchClose",
+    value: function dispatchClose(pushbar) {
+      var event = new CustomEvent('pushbar_closing', {
+        bubbles: true,
+        detail: {
+          pushbar: pushbar
+        }
+      });
+      pushbar.dispatchEvent(event);
+    }
+  }, {
+    key: "findElementById",
+    value: function findElementById(pushbarId) {
+      return document.querySelector("[data-pushbar-id=\"".concat(pushbarId, "\"]"));
+    }
+  }]);
+
+  return Pushbar;
+}();
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -212,7 +312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56431" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57358" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -387,5 +487,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/utils/pushbar.js"], null)
+//# sourceMappingURL=/pushbar.da0fe9fa.js.map

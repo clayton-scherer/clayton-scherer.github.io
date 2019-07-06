@@ -148,7 +148,7 @@ function () {
       var ulElement = this.createElement("ul");
       var buttonElement = this.createElement("button");
       var liElements;
-      var sections = ["About Me", "My Projects", "Contact Me", "To Top"];
+      var sections = ["Home", "About Me", "My Projects", "Contact Me"];
       liElements = sections.map(function (section) {
         // creating all elements
         var liElement = document.createElement("li");
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53381" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57641" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

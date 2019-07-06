@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --colors --coverage",
-    "start": "parcel index.html"
+    "start": "parcel main.html"
   },
   "repository": {
     "type": "git",

@@ -14,7 +14,7 @@ class Components {
     const buttonElement = this.createElement("button");
     let liElements;
 
-    const sections = ["About Me", "My Projects", "Contact Me", "To Top"];
+    const sections = ["Home", "About Me", "My Projects", "Contact Me"];
 
     liElements = sections.map(section => {
       // creating all elements
@@ -37,7 +37,7 @@ class Components {
       return liElement.outerHTML;
     });
 
-    ulElement.classList.add("hidden","nav-small");
+    ulElement.classList.add("hidden", "nav-small");
     ulElement.innerHTML = liElements.join("");
 
     buttonElement.classList.add("navigation__button");

@@ -117,79 +117,47 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/utils/Components.js":[function(require,module,exports) {
+})({"js/utils/Events.js":[function(require,module,exports) {
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Components =
+var Events =
 /*#__PURE__*/
 function () {
-  function Components() {
-    _classCallCheck(this, Components);
+  function Events() {
+    _classCallCheck(this, Events);
   }
 
-  _createClass(Components, [{
-    key: "createElement",
-    value: function createElement(elementType) {
-      if (!elementType) {
-        throw new Error("Must pass valid HTML Element");
-      }
-
-      var createdElement = document.createElement(elementType);
-      return createdElement;
-    }
-  }, {
-    key: "createNavigationMenu",
-    value: function createNavigationMenu() {
-      var navElement = this.createElement("nav");
-      var ulElement = this.createElement("ul");
-      var buttonElement = this.createElement("button");
-      var liElements;
-      var sections = ["Home", "About Me", "My Projects", "Contact Me"];
-      liElements = sections.map(function (section) {
-        // creating all elements
-        var liElement = document.createElement("li");
-        var aElement = document.createElement("a"); // assigning text value to anchor
-
-        aElement.textContent = section; // assign an href attribute to anchor
-
-        aElement.setAttribute("href", "#".concat(section)); // assign a class to anchors
-
-        aElement.classList.add("nav-small__item"); // adding anchor to list item
-
-        liElement.appendChild(aElement); // sending li somewhere
-
-        return liElement.outerHTML;
+  _createClass(Events, [{
+    key: "toggleSideNav",
+    value: function toggleSideNav() {
+      var openButton = document.querySelector(".open-btn");
+      var closeButton = document.querySelector(".close-btn");
+      openButton.addEventListener("click", function () {
+        var sideNav = document.querySelector(".side-nav");
+        sideNav.classList.toggle("hidden");
       });
-      ulElement.classList.add("hidden", "nav-small");
-      ulElement.innerHTML = liElements.join("");
-      buttonElement.classList.add("navigation__button");
-      buttonElement.textContent = "|||";
-      buttonElement.addEventListener("click", function () {
-        ulElement.classList.toggle("hidden");
+      closeButton.addEventListener("click", function () {
+        var sideNav = document.querySelector(".side-nav");
+        sideNav.classList.toggle("hidden");
       });
-      navElement.appendChild(buttonElement);
-      navElement.appendChild(ulElement);
-      return navElement;
     }
   }]);
 
-  return Components;
+  return Events;
 }();
 
-module.exports = Components;
+module.exports = Events;
 },{}],"js/app.js":[function(require,module,exports) {
-var Components = require("./utils/Components"); // const Events = require("./utils/Events");
+var Events = require("./utils/Events");
 
-
-var components = new Components(); // const events = new Events();
-
-var mainHeader = document.querySelector(".main-header");
-mainHeader.appendChild(components.createNavigationMenu());
-},{"./utils/Components":"js/utils/Components.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var events = new Events();
+var toggleSideNav = events.toggleSideNav;
+toggleSideNav();
+},{"./utils/Events":"js/utils/Events.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +185,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61778" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61865" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

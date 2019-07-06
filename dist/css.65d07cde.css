@@ -15,7 +15,53 @@ ul {
   list-style: none;
 }
 
-/* Tag Styling */
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Navbar and Animated Nav Menu */
+
+.navbar {
+  align-items: center;
+  position: fixed;
+  display: flex;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.open-btn {
+  font-size: 50px;
+}
+
+.close-btn {
+  font-size: 50px;
+}
+
+.navbar__item {
+  margin-left: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Define Tag Styles */
 
 div {
   align-items: center;
@@ -39,35 +85,6 @@ section {
   height: 100vh;
 }
 
-/* Anchor Styling */
-
-a {
-  display: flex;
-  flex-direction: column;
-  color: silver;
-  text-decoration: none;
-  align-items: center;
-}
-
-a:hover,
-a:focus {
-  border-bottom: 2px solid black;
-}
-
-a:visited {
-  color: rgb(177, 54, 54);
-}
-
-/* Class Styling */
-
-nav {
-  display: none;
-}
-
-.hidden {
-  display: none;
-}
-
 /* Header, Hero Image, Nav */
 
 .page-header {
@@ -82,30 +99,6 @@ nav {
   margin: 0 auto;
   padding-top: 2rem;
   width: 100%;
-}
-
-.navigation__button {
-  background-color: transparent;
-  border: none;
-  color: crimson;
-  font-size: 175%;
-  left: 0;
-}
-
-.nav-small__item {
-  background-color: silver;
-}
-
-nav {
-  display: none;
-}
-
-.nav-menu {
-  display: flex;
-}
-
-.nav-menu__list {
-  padding: 1rem;
 }
 
 .div__skills {
@@ -211,18 +204,6 @@ section.Contact-Info {
 /* Media Queries */
 
 @media (max-width: 765px) {
-  .nav-menu {
-    display: none;
-  }
-
-  nav {
-    position: fixed;
-    display: block;
-    width: 25%;
-    top: 0;
-    left: 1%;
-  }
-
   html {
     font: 16px/1 sans-serif;
   }

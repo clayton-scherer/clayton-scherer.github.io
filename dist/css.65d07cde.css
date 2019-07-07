@@ -1,0 +1,386 @@
+/* Resets */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font: 18px/1.5 sans-serif;
+  background: linear-gradient(180deg, silver, rgb(126, 68, 68) 60%, darkred);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Margin Transition */
+
+main {
+  transition: margin-left 1s;
+}
+
+/* Navbar and Animated Nav Menu */
+
+.navbar {
+  align-items: center;
+  background-color: darkred;
+  display: flex;
+  position: fixed;
+  height: 2rem;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar a:hover {
+  background-color: #dddddd;
+  color: darkred;
+  cursor: pointer;
+}
+
+.navbar__item {
+  margin-left: 2rem;
+}
+
+.open-btn {
+  height: 100%;
+  width: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.open-btn > span {
+  width: 100%;
+  position: relative;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-btn > span:before,
+.open-btn > span:after {
+  content: "";
+  position: absolute;
+  /* z-index: 1; */
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: inherit;
+}
+
+.open-btn > span:after {
+  top: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.side-nav {
+  background-color: #2f2f2f;
+  height: 100vh;
+  left: 0;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  width: 0;
+  z-index: 9;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.side-nav a {
+  border-bottom: 1px solid lightslategray;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.side-nav .close-btn {
+  color: floralwhite;
+  /* position: absolute; */
+  margin-left: 8rem;
+  top: 0;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+/* Define Tag Styles */
+
+div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 90%;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+p {
+  max-width: 80%;
+}
+
+section {
+  height: 100vh;
+}
+
+/* Header, Hero Image, Nav */
+
+.page-header {
+  align-items: center;
+  background-image: url(https://lorempixel.com/output/abstract-q-g-1920-1920-7.jpg);
+  background-attachment: fixed;
+  color: silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.div__skills {
+  display: flex;
+  float: left;
+  height: 50%;
+  justify-content: center;
+  text-align: center;
+  width: 45%;
+}
+
+.skills-list {
+  display: flex;
+  float: right;
+  height: 50%;
+  justify-content: center;
+  text-align: center;
+  width: 45%;
+}
+
+/* About Me */
+
+.div2 {
+  background-image: url("/profile-picture.879da966.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.About__header {
+  border-bottom: 2px solid black;
+  width: 90%;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.intro {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(12, 12, 12, 0.6);
+  color: whitesmoke;
+  height: min-content;
+  padding-bottom: 2rem;
+}
+
+/* My Projects */
+
+ul#tabs {
+  display: flex;
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+ul#tabs li {
+  margin-left: 0.2rem;
+}
+
+ul#tabs li a {
+  color: #42454a;
+  background-color: #dedbde;
+  border: 1px solid #c9c3ba;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+ul#tabs li a:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+div.tab-content {
+  border: 2px solid #c9c3ba;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+div#virtual-pet {
+  background-image: url("/virtual-pet.4f061d00.png");
+  background-size: cover;
+}
+
+div#hospital {
+  background-image: url("/high-st-hospital.b6a29192.png");
+  background-size: cover;
+}
+
+div#review-site {
+  background-image: url("/review-site.6b4ed75a.png");
+  background-size: cover;
+}
+
+div.overlay {
+  background-color: rgba(12, 12, 12, 0.8);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+}
+
+.overlay__header {
+  margin-bottom: 1rem;
+}
+
+.projects-description {
+  margin-top: 0.5rem;
+}
+
+.description {
+  overflow: hidden;
+}
+
+div.tab-content.hide {
+  display: none;
+}
+
+/* Contact Me and footer */
+
+.div4 {
+  display: flex;
+  justify-content: center;
+}
+
+.connect {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.social-media {
+  width: 100%;
+}
+
+.social-media__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media__header::before {
+  content: "";
+  border-bottom: 3px solid black;
+  width: 20%;
+  margin-right: 2%;
+}
+
+.social-media__header::after {
+  content: "";
+  border-bottom: 3px solid black;
+  width: 20%;
+  margin-left: 2%;
+}
+
+.media-list {
+  display: flex;
+  justify-content: center;
+}
+.media-list__item {
+  padding: 1rem;
+}
+
+section.Contact {
+  height: 50%;
+}
+
+/* Media Queries */
+
+@media (max-width: 650px) {
+  html {
+    font: 16px/1 sans-serif;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .profile-picture {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 90%;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 650px) {
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  html {
+    font: 24px/1.618 sans-serif;
+  }
+
+  .open-btn {
+    display: none;
+  }
+}
+
+
+/*# sourceMappingURL=/css.65d07cde.css.map */

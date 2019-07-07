@@ -207,12 +207,13 @@ section {
 /* My Projects */
 
 ul#tabs {
+  display: flex;
   list-style-type: none;
   margin-top: 1rem;
 }
 
 ul#tabs li {
-  display: inline-flex;
+  margin-left: 0.2rem;
 }
 
 ul#tabs li a {
@@ -241,30 +242,38 @@ div#virtual-pet {
   background-size: cover;
 }
 
+div#hospital {
+  background-image: url("/images//high-st-hospital.png");
+  background-size: cover;
+}
+
+div#review-site {
+  background-image: url("/images/review-site.png");
+  background-size: cover;
+}
+
 div.overlay {
   background-color: rgba(12, 12, 12, 0.8);
+  display: flex;
+  justify-content: center;
   color: whitesmoke;
   margin: 0;
   width: 50%;
+  height: 100%;
   right: 0;
   position: absolute;
 }
 
+.overlay__header {
+  margin-bottom: 1rem;
+}
+
+.description {
+  overflow: hidden;
+}
+
 div.tab-content.hide {
   display: none;
-}
-
-.hospital-picture {
-  background-image: url("/images/high-st-hospital.png");
-}
-
-#virtual-pet {
-  /* background-image: url("/images/virtual-pet.png"); */
-  background-repeat: no-repeat;
-}
-
-.review-picture {
-  background-image: url("/images/review-site.png");
 }
 
 /* Contact Me and footer */
@@ -319,7 +328,7 @@ section.Contact {
 
 @media (max-width: 764px) {
   html {
-    font: 18px/1 sans-serif;
+    font: 16px/1 sans-serif;
   }
 
   img {
@@ -340,6 +349,10 @@ section.Contact {
     justify-content: center;
     margin-top: 1rem;
     width: 90%;
+  }
+
+  .description {
+    font-size: 12px;
   }
 }
 

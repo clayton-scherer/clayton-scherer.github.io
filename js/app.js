@@ -1,9 +1,6 @@
 const Events = require("./utils/Events");
-const ghpages = require('gh-pages');
- 
-const events = new Events();
 
-ghpages.publish('dist', function(err) {});
+const events = new Events();
 
 events.toggleSideNav();
 events.showTab();

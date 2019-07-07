@@ -185,10 +185,7 @@ function reloadCSS() {
 
 module.exports = reloadCSS;
 },{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/index.CSS":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
+module.exports="/f54a899bf0959e75d242048e65d07cde.CSS";
 },{"C:\\Users\\Clayton\\wcci\\code\\clayton-scherer.github.io\\images\\profile-picture.jpg":[["profile-picture.879da966.jpg","images/profile-picture.jpg"],"images/profile-picture.jpg"],"C:\\Users\\Clayton\\wcci\\code\\clayton-scherer.github.io\\images\\virtual-pet.png":[["virtual-pet.4f061d00.png","images/virtual-pet.png"],"images/virtual-pet.png"],"C:\\Users\\Clayton\\wcci\\code\\clayton-scherer.github.io\\images\\high-st-hospital.png":[["high-st-hospital.b6a29192.png","images/high-st-hospital.png"],"images/high-st-hospital.png"],"C:\\Users\\Clayton\\wcci\\code\\clayton-scherer.github.io\\images\\review-site.png":[["review-site.6b4ed75a.png","images/review-site.png"],"images/review-site.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -217,7 +214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55217" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55917" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

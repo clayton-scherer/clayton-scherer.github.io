@@ -84,48 +84,23 @@
             were developed using an Agile work methodology, test driven
             development and of course, clean code!
           </p>
-          <div class="projects-container">
-            <article class="high-st-hospital project">
-              <div class="project-name">
-                <h3>High st. Hospital</h3>
-              </div>
-              <div class="project-description">
-                <p>
-                  This was a console based application that mimicked a hospital
-                  database. The user started out viewing a custom menu that they
-                  could navigate to see: records for the staff and their
-                  abilities, the patients and their statuses, as well as being
-                  able to exit at their leisure.
-                </p>
-              </div>
-            </article>
-            <article class="virtual-pet project">
-              <div class="project-name">
-                <h3>Virtual Pet</h3>
-              </div>
-              <div class="project-description">
-                <p>
-                  This was a console based application that allowed the player
-                  to interact with virtual pets through our shelter system.
-                  Players could feed, play and bathe their pets while making
-                  sure to keep the shelter and their pets cages clean!
-                </p>
-              </div>
-            </article>
-            <article class="review-site project">
-              <div class="project-name">
-                <h3>Welp Review Site</h3>
-              </div>
-              <div class="project-description">
-                <p>
-                  This was a fullstack MVC application that mocked a review
-                  site, similar to Yelp, but with memes. Users had the ability
-                  to create tags, categories and authors as well as the ability
-                  to post reviews.
-                </p>
-              </div>
-            </article>
+          <ul id="tabs">
+          <li><a class="tab1">Virtual Pet</a></li>
+          <li><a class="tab2">High St. Hospital</a></li>
+          <li><a class="tab3">Welp Review Site</a></li>
+          </ul>
+          <div class="tab-content" id="virtual-pet">
+            <h3>Virtual Pet</h3>
+            <p>This project is a pet</p>
           </div>
+          <div class="tab-content hide" id="hospital">
+              <h3>High St. Hospital</h3>
+              <p>This project is a hospital</p>
+            </div>
+            <div class="tab-content hide" id="review-site">
+                <h3>Welp</h3>
+                <p>This project is sick</p>
+              </div>
         </div>
       </section>
 
@@ -175,3 +150,45 @@
     <script src="./js/app.js"></script>
   </body>
 </html>
+
+<!-- <div class="projects-container">
+            <article class="high-st-hospital project">
+              <div class="project-name hospital-picture">
+                <h3>High st. Hospital</h3>
+              </div>
+              <div class="project-description">
+                <p>
+                  This was a console based application that mimicked a hospital
+                  database. The user started out viewing a custom menu that they
+                  could navigate to see: records for the staff and their
+                  abilities, the patients and their statuses, as well as being
+                  able to exit at their leisure.
+                </p>
+              </div>
+            </article>
+            <article class="virtual-pet project">
+              <div class="VP-picture">
+                <h3 class="project-name">Virtual Pet</h3>
+              </div>
+              <div class="project-description">
+                <p>
+                  This was a console based application that allowed the player
+                  to interact with virtual pets through our shelter system.
+                  Players could feed, play and bathe their pets while making
+                  sure to keep the shelter and their pets cages clean!
+                </p>
+              </div>
+            </article>
+            <article class="review-site project">
+              <div class="review-picture">
+                <h3 class="project-name">Welp Review Site</h3>
+              </div>
+              <div class="project-description">
+                <p>
+                  This was a fullstack MVC application that mocked a review
+                  site, similar to Yelp, but with memes. Users had the ability
+                  to create tags, categories and authors as well as the ability
+                  to post reviews.
+                </p>
+              </div>
+            </article> -->

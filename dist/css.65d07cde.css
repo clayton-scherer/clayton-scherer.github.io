@@ -208,33 +208,51 @@ section {
 
 .div3 {
   background-color: brown;
-  /* padding-top: 1rem; */
 }
 
-.projects-container {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  overflow: hidden;
-  border: 1px solid black;
-  margin: 1rem;
-}
-
-.projects-description {
+ul#tabs {
+  list-style-type: none;
   margin-top: 1rem;
 }
 
-.project {
-  display: flex;
-  align-items: center;
-  height: 100%;
+ul#tabs li {
+  display: inline-flex;
 }
 
-.review-site {
+ul#tabs li a {
+  color: #42454a;
+  background-color: #dedbde;
+  border: 1px solid #c9c3ba;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+ul#tabs li a:hover {
+  background-color: #f1f0ee;
+  cursor: pointer;
+}
+
+div.tab-content {
+  border: 1px solid #c9c3ba;
+  padding-top: 2rem;
+  background-color: #f1f0ee;
+}
+
+div.tab-content.hide {
+  display: none;
+}
+
+.hospital-picture {
+  background-image: url("/high-st-hospital.b6a29192.png");
+}
+
+.VP-picture {
+  background-image: url("/virtual-pet.4f061d00.png");
+}
+
+.review-picture {
   background-image: url("/review-site.6b4ed75a.png");
-  align-content: center;
-  align-items: center;
 }
-
 
 /* Contact Me and footer */
 
@@ -303,6 +321,13 @@ section.Contact {
 
   .navbar-nav {
     display: none;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 90%;
   }
 }
 

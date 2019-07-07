@@ -17,6 +17,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: silver;
 }
 
 .hidden {
@@ -27,8 +28,12 @@ a {
 
 .navbar {
   align-items: center;
-  position: fixed;
+  background-color: darkred;
   display: flex;
+  position: fixed;
+  height: 2.5rem;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-nav {
@@ -36,30 +41,26 @@ a {
 }
 
 .open-btn {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .close-btn {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .navbar__item {
   margin-left: 2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.side-nav {
+  background-color: #2f2f2f;
+  width: 200px;
+  height: 100vh;
+  z-index: 3;
+  position: sticky;
+  top: 0;
+  margin: unset;
+}
 
 /* Define Tag Styles */
 
@@ -69,6 +70,7 @@ div {
   flex-direction: column;
   height: 100%;
   margin: 0 auto;
+  padding-top: 2rem;
   width: 90%;
 }
 
@@ -142,6 +144,7 @@ section {
 
 .div3 {
   background-color: brown;
+  /* padding-top: 1rem; */
 }
 
 .project-container {
@@ -203,9 +206,9 @@ section.Contact-Info {
 
 /* Media Queries */
 
-@media (max-width: 765px) {
+@media (max-width: 764px) {
   html {
-    font: 16px/1 sans-serif;
+    font: 20px/1 sans-serif;
   }
 
   img {
@@ -221,9 +224,17 @@ section.Contact-Info {
   p {
     max-width: 100%;
   }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  .open-btn {
+    display: block;
+  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 765px) {
   img {
     height: 100px;
     width: 100px;
@@ -231,5 +242,9 @@ section.Contact-Info {
 
   html {
     font: 24px/1.618 sans-serif;
+  }
+
+  .open-btn {
+    display: none;
   }
 }

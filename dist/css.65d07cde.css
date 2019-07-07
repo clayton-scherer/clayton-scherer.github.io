@@ -192,8 +192,8 @@ section {
 }
 
 .profile-picture {
-  height: 100%;
-  width: 60%;
+  height: 50%;
+  width: 40%;
   margin-bottom: 1.5rem;
 }
 
@@ -211,13 +211,30 @@ section {
   /* padding-top: 1rem; */
 }
 
-.project-container {
+.projects-container {
   display: grid;
   grid-template-rows: repeat(3, auto);
   overflow: hidden;
   border: 1px solid black;
   margin: 1rem;
 }
+
+.projects-description {
+  margin-top: 1rem;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.review-site {
+  background-image: url("/review-site.6b4ed75a.png");
+  align-content: center;
+  align-items: center;
+}
+
 
 /* Contact Me and footer */
 
@@ -264,7 +281,7 @@ section {
   padding: 1rem;
 }
 
-section.Contact-Info {
+section.Contact {
   height: 50%;
 }
 
@@ -281,16 +298,11 @@ section.Contact-Info {
   }
 
   .profile-picture {
-    height: 40%;
     width: 100%;
   }
 
   .navbar-nav {
     display: none;
-  }
-
-  .open-btn {
-    display: block;
   }
 }
 

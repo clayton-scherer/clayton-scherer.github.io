@@ -26,7 +26,7 @@ a {
 /* Main Margin Transition */
 
 main {
-  transition:margin-left 1s;
+  transition: margin-left 1s;
 }
 
 /* Navbar and Animated Nav Menu */
@@ -57,9 +57,37 @@ main {
 }
 
 .open-btn {
-  font-size: 50px;
+  height: 100%;
+  width: 2rem;
   cursor: pointer;
-  color: silver;
+  background-color: transparent;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.open-btn > span {
+  width: 100%;
+  position: relative;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-btn > span:before,
+.open-btn > span:after {
+  content: "";
+  position: absolute;
+  /* z-index: 1; */
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: inherit;
+}
+
+.open-btn > span:after {
+  top: 10px;
 }
 
 .close-btn {

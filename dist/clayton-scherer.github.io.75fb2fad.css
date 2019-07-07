@@ -1,0 +1,223 @@
+/* Resets and Generic Styling */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font: 18px/1.5 sans-serif;
+  background: linear-gradient(135deg, silver, rgb(126, 68, 68) 40%, #ff2400);
+}
+
+/* Tag Styling */
+
+div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  width: 90%;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+p {
+  max-width: 60%;
+}
+
+section {
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Anchor Styling */
+
+a {
+  display: flex;
+  flex-direction: column;
+  color: silver;
+  text-decoration: none;
+  align-items: center;
+}
+
+a:hover,
+a:focus {
+  border-bottom: 2px solid black;
+}
+
+a:visited {
+  color: crimson;
+}
+
+/* Class Styling */
+
+/* Header, Hero Image, Nav */
+
+.page-header {
+  align-items: center;
+  background-image: url(https://lorempixel.com/output/abstract-q-g-1920-1920-7.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 90%;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu__list {
+  padding: 1rem;
+}
+
+.div__skills {
+  display: flex;
+  float: left;
+  height: 50%;
+  justify-content: center;
+  text-align: center;
+  width: 45%;
+}
+
+.skills-list {
+  display: flex;
+  float: right;
+  height: 50%;
+  justify-content: center;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 45%;
+}
+
+/* About Me */
+
+.div2 {
+  background-color: bisque;
+}
+
+.profile-picture {
+  height: 100%;
+  width: 60%;
+  margin-bottom: 1.5rem;
+}
+
+.about-me__header {
+  text-align: center;
+  width: 60%;
+  border-bottom: 2px solid black;
+  margin-bottom: 1rem;
+}
+
+/* My Projects */
+
+.div3 {
+  background-color: brown;
+}
+
+.project-container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  overflow: hidden;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+/* Contact Me and footer */
+
+.div4 {
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: center;
+}
+
+.connect {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.social-media {
+  width: 100%;
+}
+
+.social-media__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media__header::before {
+  content: "";
+  border-bottom: 3px solid black;
+  width: 20%;
+  margin-right: 2%;
+}
+
+.social-media__header::after {
+  content: "";
+  border-bottom: 3px solid black;
+  width: 20%;
+  margin-left: 2%;
+}
+
+.media-list {
+  display: flex;
+  justify-content: center;
+}
+.media-list__item {
+  padding: 1rem;
+}
+
+section.Contact-Info {
+  height: 50%;
+}
+
+/* Media Queries */
+
+@media (max-width: 399px) {
+  html {
+    font: 14px/1 sans-serif;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .profile-picture {
+    height: 50%;
+    width: 100%;
+  }
+
+  p {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  html {
+    font: 24px/1.618 sans-serif;
+  }
+}
+
+
+/*# sourceMappingURL=/clayton-scherer.github.io.75fb2fad.css.map */

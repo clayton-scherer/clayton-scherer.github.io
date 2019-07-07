@@ -23,9 +23,7 @@ a {
   align-items: center;
 }
 
-.hidden {
-  display: none;
-}
+/* Main Margin Transition */
 
 main {
   transition:margin-left 1s;

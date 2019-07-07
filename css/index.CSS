@@ -206,10 +206,6 @@ section {
 
 /* My Projects */
 
-.div3 {
-  background-color: brown;
-}
-
 ul#tabs {
   list-style-type: none;
   margin-top: 1rem;
@@ -228,14 +224,30 @@ ul#tabs li a {
 }
 
 ul#tabs li a:hover {
-  background-color: #f1f0ee;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
 div.tab-content {
-  border: 1px solid #c9c3ba;
-  padding-top: 2rem;
-  background-color: #f1f0ee;
+  border: 2px solid #c9c3ba;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+div#virtual-pet {
+  background-image: url("/images/virtual-pet.png");
+  background-size: cover;
+}
+
+div.overlay {
+  background-color: rgba(12, 12, 12, 0.8);
+  color: whitesmoke;
+  margin: 0;
+  width: 50%;
+  right: 0;
+  position: absolute;
 }
 
 div.tab-content.hide {
@@ -246,8 +258,9 @@ div.tab-content.hide {
   background-image: url("/images/high-st-hospital.png");
 }
 
-.VP-picture {
-  background-image: url("/images/virtual-pet.png");
+#virtual-pet {
+  /* background-image: url("/images/virtual-pet.png"); */
+  background-repeat: no-repeat;
 }
 
 .review-picture {
@@ -257,7 +270,6 @@ div.tab-content.hide {
 /* Contact Me and footer */
 
 .div4 {
-  background-color: darkgoldenrod;
   display: flex;
   justify-content: center;
 }

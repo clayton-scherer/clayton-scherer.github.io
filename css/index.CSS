@@ -8,7 +8,7 @@
 
 html {
   font: 18px/1.5 sans-serif;
-  background: linear-gradient(180deg, silver, rgb(126, 68, 68) 80%, #ff2400);
+  background: linear-gradient(180deg, silver, rgb(126, 68, 68) 60%, darkred);
 }
 
 ul {
@@ -18,10 +18,17 @@ ul {
 a {
   text-decoration: none;
   color: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hidden {
   display: none;
+}
+
+main {
+  transition:margin-left 1s;
 }
 
 /* Navbar and Animated Nav Menu */
@@ -31,35 +38,66 @@ a {
   background-color: darkred;
   display: flex;
   position: fixed;
-  height: 2.5rem;
+  height: 2rem;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar-nav {
   display: flex;
 }
 
-.open-btn {
-  font-size: 40px;
-}
-
-.close-btn {
-  font-size: 40px;
+.navbar a:hover {
+  background-color: #dddddd;
+  color: darkred;
+  cursor: pointer;
 }
 
 .navbar__item {
   margin-left: 2rem;
 }
 
+.open-btn {
+  font-size: 50px;
+  cursor: pointer;
+  color: silver;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 40px;
+}
+
 .side-nav {
   background-color: #2f2f2f;
-  width: 200px;
   height: 100vh;
-  z-index: 3;
-  position: sticky;
+  left: 0;
+  opacity: 0.9;
+  position: fixed;
   top: 0;
-  margin: unset;
+  width: 0;
+  z-index: 9;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.side-nav a {
+  border-bottom: 1px solid lightslategray;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.side-nav .close-btn {
+  color: floralwhite;
+  /* position: absolute; */
+  margin-left: 8rem;
+  top: 0;
+}
+
+.side-nav a:hover {
+  color: #fff;
 }
 
 /* Define Tag Styles */
@@ -80,7 +118,7 @@ img {
 }
 
 p {
-  max-width: 60%;
+  max-width: 80%;
 }
 
 section {
@@ -208,7 +246,7 @@ section.Contact-Info {
 
 @media (max-width: 764px) {
   html {
-    font: 20px/1 sans-serif;
+    font: 18px/1 sans-serif;
   }
 
   img {
@@ -218,11 +256,7 @@ section.Contact-Info {
 
   .profile-picture {
     height: 40%;
-    width: 60%;
-  }
-
-  p {
-    max-width: 100%;
+    width: 100%;
   }
 
   .navbar-nav {

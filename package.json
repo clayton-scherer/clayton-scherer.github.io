@@ -5,8 +5,7 @@
   "scripts": {
     "test": "jest --colors --coverage",
     "start": "parcel index.html",
-    "predeploy": "rm -rf dist && parcel build index.html",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "rm -rf dist && parcel build index.html"
   },
   "repository": {
     "type": "git",

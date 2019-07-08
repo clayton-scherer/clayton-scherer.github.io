@@ -1,4 +1,4 @@
-const Events = require("./utils/Events");
+const Events = require("./Events");
 
 const events = new Events();
 

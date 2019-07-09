@@ -2,7 +2,7 @@
   "name": "clayton-scherer.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest test",
     "start": "parcel index.html",

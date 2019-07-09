@@ -79,7 +79,6 @@ main {
 .open-btn > span:after {
   content: "";
   position: absolute;
-  /* z-index: 1; */
   top: -10px;
   width: 100%;
   height: 2px;
@@ -117,7 +116,7 @@ main {
 
 .side-nav .close-btn {
   color: floralwhite;
-  /* position: absolute; */
+  position: absolute;
   margin-left: 8rem;
   top: 0;
 }

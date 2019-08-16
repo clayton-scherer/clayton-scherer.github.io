@@ -3,11 +3,20 @@ class Events {
   toggleSideNav() {
     const openButton = document.querySelector(".open-btn");
     const closeButton = document.querySelector(".close-btn");
+    const closeButtonLinks = document.querySelectorAll(".close-btn--link");
 
     openButton.addEventListener("click", () => {
       const sideNav = document.querySelector(".side-nav");
 
       sideNav.style.width = "10rem";
+    });
+
+    closeButtonLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const sideNav = document.querySelector(".side-nav");
+
+        sideNav.style.width = "0";
+      });
     });
 
     closeButton.addEventListener("click", () => {

@@ -137,9 +137,16 @@ function () {
     value: function toggleSideNav() {
       var openButton = document.querySelector(".open-btn");
       var closeButton = document.querySelector(".close-btn");
+      var closeButtonLinks = document.querySelectorAll(".close-btn--link");
       openButton.addEventListener("click", function () {
         var sideNav = document.querySelector(".side-nav");
         sideNav.style.width = "10rem";
+      });
+      closeButtonLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var sideNav = document.querySelector(".side-nav");
+          sideNav.style.width = "0";
+        });
       });
       closeButton.addEventListener("click", function () {
         var sideNav = document.querySelector(".side-nav");
@@ -218,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64374" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49958" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

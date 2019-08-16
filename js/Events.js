@@ -1,4 +1,5 @@
 class Events {
+  // open and closes the mobile side nav by adjusting the width of the navbar
   toggleSideNav() {
     const openButton = document.querySelector(".open-btn");
     const closeButton = document.querySelector(".close-btn");
@@ -17,14 +18,15 @@ class Events {
   }
 
   showTab() {
+    // adds or removes a "hide" class depending on which tab the user wishes to view
     const tabOne = document.querySelector(".tab1");
     const tabTwo = document.querySelector(".tab2");
     const tabThree = document.querySelector(".tab3");
 
     tabOne.addEventListener("click", () => {
-      const tabOneContent = document.querySelector("#virtual-pet");
-      const tabTwoContent = document.querySelector("#hospital");
-      const tabThreeContent = document.querySelector("#review-site");
+      const tabOneContent = document.querySelector("#welp");
+      const tabTwoContent = document.querySelector("#muzify");
+      const tabThreeContent = document.querySelector("#date-night-shuffle");
 
       tabOneContent.classList.remove("hide");
       tabTwoContent.classList.add("hide");
@@ -32,9 +34,9 @@ class Events {
     });
 
     tabTwo.addEventListener("click", () => {
-      const tabOneContent = document.querySelector("#virtual-pet");
-      const tabTwoContent = document.querySelector("#hospital");
-      const tabThreeContent = document.querySelector("#review-site");
+      const tabOneContent = document.querySelector("#welp");
+      const tabTwoContent = document.querySelector("#muzify");
+      const tabThreeContent = document.querySelector("#date-night-shuffle");
 
       tabOneContent.classList.add("hide");
       tabTwoContent.classList.remove("hide");
@@ -42,9 +44,9 @@ class Events {
     });
 
     tabThree.addEventListener("click", () => {
-      const tabOneContent = document.querySelector("#virtual-pet");
-      const tabTwoContent = document.querySelector("#hospital");
-      const tabThreeContent = document.querySelector("#review-site");
+      const tabOneContent = document.querySelector("#welp");
+      const tabTwoContent = document.querySelector("#muzify");
+      const tabThreeContent = document.querySelector("#date-night-shuffle");
 
       tabOneContent.classList.add("hide");
       tabTwoContent.classList.add("hide");

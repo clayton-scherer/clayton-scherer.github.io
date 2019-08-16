@@ -186,11 +186,16 @@ section {
 
 /* About Me */
 
+section.About {
+  height: 50vh;
+}
+
 .div2 {
-  background-image: url("/Images/profile-picture.jpg");
+  /* background-image: url("/Images/profile-picture.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 50vh;
 }
 
 .About__header {
@@ -204,13 +209,21 @@ section {
 div.intro {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   background-color: rgba(12, 12, 12, 0.6);
   color: whitesmoke;
-  height: min-content;
+  height: 80%;
   padding-bottom: 2rem;
 }
 
 /* My Projects */
+
+.git-code {
+  background-color: darkred;
+  color: silver;
+  padding: 0.2rem;
+  border-radius: 25%;
+}
 
 ul#tabs {
   display: flex;
@@ -243,19 +256,22 @@ div.tab-content {
   position: relative;
 }
 
-div#virtual-pet {
-  background-image: url("/images/virtual-pet.png");
+div#welp {
+  background-image: url("../Images/review-site.png");
   background-size: cover;
+  background-position: center;
 }
 
-div#hospital {
-  background-image: url("/images//high-st-hospital.png");
+div#muzify {
+  background-image: url("../Images/muzify.png");
   background-size: cover;
+  background-position: center;
 }
 
-div#review-site {
-  background-image: url("/images/review-site.png");
+div#date-night-shuffle {
+  background-image: url("../Images/DNS-Graphic.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 div.overlay {
@@ -279,7 +295,11 @@ div.overlay {
 }
 
 .description {
-  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.description::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 div.tab-content.hide {

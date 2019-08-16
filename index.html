@@ -16,8 +16,8 @@
 
       <ul class="navbar-nav">
         <li class="navbar__item"><a href="#">Home</a></li>
-        <li class="navbar__item"><a href="#About">About</a></li>
         <li class="navbar__item"><a href="#Projects">Projects</a></li>
+        <li class="navbar__item"><a href="#About">About</a></li>
         <li class="navbar__item"><a href="#Contact">Contact</a></li>
       </ul>
     </nav>
@@ -25,8 +25,8 @@
     <nav class="side-nav">
       <span class="close-btn">&times;</span>
       <a href="#">Home</a>
-      <a href="#About">About</a>
       <a href="#Projects">Projects</a>
+      <a href="#About">About</a>
       <a href="#Contact">Contact</a>
     </nav>
 
@@ -54,6 +54,80 @@
         </div>
       </section>
 
+      <section class="Projects">
+        <a id="Projects"></a>
+        <div class="div3">
+          <h2>My Projects</h2>
+          <p class="projects-description">
+            Here are some of the projects I have had the pleasure to work on and
+            develop my skills! These projects were developed in an Agile
+            environment with test driven development and of course, clean code!
+          </p>
+          <ul id="tabs">
+            <li><a class="tab1">Welp</a></li>
+            <li><a class="tab2">Muzify</a></li>
+            <li><a class="tab3">Date Night Shuffle</a></li>
+          </ul>
+          <div class="tab-content" id="welp">
+            <div class="overlay">
+              <a
+                href="https://github.com/team-javascript/review-project"
+                target="_blank"
+                ><button class="git-code">Show Me the Code</button></a
+              >
+              <h3 class="overlay__header">Welp</h3>
+              <p class="description">
+                We built a Node MVC application, bootstrapped using the Express
+                generator, and using Handlebars as a templating engine. Users
+                could interact with our site to browse reviews, tags and
+                categories with the ability to create all three respectively.
+                You could also leave your comments on a review and rate them
+                using a thumb-up/thumb-down rating system.
+              </p>
+            </div>
+          </div>
+          <div class="tab-content hide" id="muzify">
+            <div class="overlay">
+              <a
+                href="https://github.com/team-javascript/music-api-frontend"
+                target="_blank"
+                ><button class="git-code">Show Me the Code</button></a
+              >
+              <h3 class="overlay__header">Muzify</h3>
+              <p class="description">
+                We built a RESTful API using Node and Express. We used a NoSQL
+                database to house our data with paths to create, read, update
+                and delete all entities. We built a Single Page Application
+                (SPA) using Vanilla JavaScript to interact with our API. Our
+                application let users browse music by songs, albums and artists.
+                Browsing a single song, users could listen to music directly in
+                our application!
+              </p>
+            </div>
+          </div>
+          <div class="tab-content hide" id="date-night-shuffle">
+            <div class="overlay">
+              <a
+                href="https://github.com/team-javascript/date-night-roulette"
+                target="_blank"
+                ><button class="git-code">Show Me the Code</button></a
+              >
+              <h3 class="overlay__header">Date Night Shuffle</h3>
+              <p class="description">
+                We built a Single Page Application, bootstrapped using Create
+                React app. We built a RESTful API with Node and Express,
+                interacting with a NoSQL database. The goal of this application
+                is to create an engaging application to help users discover new
+                resturaunts in their location. They can view estalishments by
+                first selecting an area, then filter those by price for a more
+                tailored experience. If you're feeling lucky, there is an option
+                to get a totally random estalishment in a general area!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="About">
         <a id="About"></a>
         <div class="div2">
@@ -62,64 +136,13 @@
             <p class="bio">
               I attended The Ohio State University before I made the commitment
               to enlist in the United States Marine Corps. I served four years
-              on active duty in the infantry with 1st Batallion 7th Marines -
-              Baker Company. Near the end of my active service I had been
-              promoted to E-5 (Sergeant) and decided to advance in another
-              direction. Then I found JavaScript and the rest is history<br />My
-              current goal is to continue to improve my language proficiency and
-              dig deeper into the frameworks available!
+              on active duty with 1st Batallion 7th Marines - Baker Company.
+              Near the end of my service I had been promoted to E-5 (Sergeant)
+              and decided to advance in another direction. Then I found
+              JavaScript and the rest is history<br />My current goal is to
+              continue to improve my language proficiency and dig deeper into
+              the frameworks, other languages and design patterns out there!
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="Projects">
-        <a id="Projects"></a>
-        <div class="div3">
-          <h2>My Works in Progress</h2>
-          <p class="projects-description">
-            Here are some of the projects I have been working on! All projects
-            were developed using an Agile work methodology, test driven
-            development and of course, clean code!
-          </p>
-          <ul id="tabs">
-            <li><a class="tab1">Virtual Pet</a></li>
-            <li><a class="tab2">High St. Hospital</a></li>
-            <li><a class="tab3">Welp</a></li>
-          </ul>
-          <div class="tab-content" id="virtual-pet">
-            <div class="overlay">
-              <h3 class="overlay__header">Virtual Pet</h3>
-              <p class="description">
-                This was a console based application that allowed the player to
-                interact with virtual pets through a shelter system. Players
-                could feed, play and bathe their pets; the game kept track of
-                all the pet and shelter stats. The player goal was to make sure
-                to keep the shelter clean and their pets healthy!
-              </p>
-            </div>
-          </div>
-          <div class="tab-content hide" id="hospital">
-            <div class="overlay">
-              <h3 class="overlay__header">High St Hospital</h3>
-              <p class="description">
-                This was a console based application that mimicked a hospital
-                database. The user could naviagte a custom menu to see: records
-                for the staff and their abilities, the patients and their
-                statuses, as well as being able to exit at their leisure.
-              </p>
-            </div>
-          </div>
-          <div class="tab-content hide" id="review-site">
-            <div class="overlay">
-              <h3 class="overlay__header">Welp</h3>
-              <p class="description">
-                This was a fullstack MVC application that mocked a review site,
-                similar to Yelp, but with memes. Users had the ability to create
-                tags, categories and authors as well as the ability to post
-                reviews and rate them!
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -162,7 +185,7 @@
             </ul>
           </article>
           <footer class="footer-copyright">
-            <small>&copy; Clayton Scherer</small>
+            <small>&copy; Clayton Scherer 2019</small>
           </footer>
         </div>
       </section>

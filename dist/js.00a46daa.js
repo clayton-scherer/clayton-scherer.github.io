@@ -133,6 +133,7 @@ function () {
 
   _createClass(Events, [{
     key: "toggleSideNav",
+    // open and closes the mobile side nav by adjusting the width of the navbar
     value: function toggleSideNav() {
       var openButton = document.querySelector(".open-btn");
       var closeButton = document.querySelector(".close-btn");
@@ -148,29 +149,30 @@ function () {
   }, {
     key: "showTab",
     value: function showTab() {
+      // adds or removes a "hide" class depending on which tab the user wishes to view
       var tabOne = document.querySelector(".tab1");
       var tabTwo = document.querySelector(".tab2");
       var tabThree = document.querySelector(".tab3");
       tabOne.addEventListener("click", function () {
-        var tabOneContent = document.querySelector("#virtual-pet");
-        var tabTwoContent = document.querySelector("#hospital");
-        var tabThreeContent = document.querySelector("#review-site");
+        var tabOneContent = document.querySelector("#welp");
+        var tabTwoContent = document.querySelector("#muzify");
+        var tabThreeContent = document.querySelector("#date-night-shuffle");
         tabOneContent.classList.remove("hide");
         tabTwoContent.classList.add("hide");
         tabThreeContent.classList.add("hide");
       });
       tabTwo.addEventListener("click", function () {
-        var tabOneContent = document.querySelector("#virtual-pet");
-        var tabTwoContent = document.querySelector("#hospital");
-        var tabThreeContent = document.querySelector("#review-site");
+        var tabOneContent = document.querySelector("#welp");
+        var tabTwoContent = document.querySelector("#muzify");
+        var tabThreeContent = document.querySelector("#date-night-shuffle");
         tabOneContent.classList.add("hide");
         tabTwoContent.classList.remove("hide");
         tabThreeContent.classList.add("hide");
       });
       tabThree.addEventListener("click", function () {
-        var tabOneContent = document.querySelector("#virtual-pet");
-        var tabTwoContent = document.querySelector("#hospital");
-        var tabThreeContent = document.querySelector("#review-site");
+        var tabOneContent = document.querySelector("#welp");
+        var tabTwoContent = document.querySelector("#muzify");
+        var tabThreeContent = document.querySelector("#date-night-shuffle");
         tabOneContent.classList.add("hide");
         tabTwoContent.classList.add("hide");
         tabThreeContent.classList.remove("hide");
@@ -216,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50307" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64374" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
